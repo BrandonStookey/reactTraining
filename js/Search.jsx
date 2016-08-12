@@ -4,15 +4,13 @@ const data = require('../public/data')
 
 const Search = () => {
   return (
-    <div className='container'>
-      <div className='shows'>
-        {data.shows.map((show) => {
-          return (
-            <ShowCard show={show} key={show.imdbID} />
-          )
-        })}
-      </div>  
-    </div>
+    <div className='shows'>
+      {data.shows.map((show) => {
+        return (
+          <ShowCard show={show} key={show.imdbID} />
+        )
+      })}
+    </div>  
   )
 
 }

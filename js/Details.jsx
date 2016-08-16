@@ -15,7 +15,7 @@ const Details = React.createClass({
         </header>
         <div className='video-info'>
           <h1 className='video-title'>{title}</h1>
-          <h2 className=''></h2> 
+          <h2 className='video-year'>({year})</h2> 
         </div>
       </div>    
     )

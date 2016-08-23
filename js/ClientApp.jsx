@@ -4,8 +4,10 @@ const Landing = require('./Landing')
 const Search = require('./Search')
 const Layout = require('./Layout')
 const Details = require('./Details')
+const Header = require('./Header')
 const { Router, Route, IndexRoute, hashHistory } = require('react-router')
 const { shows } = require('../public/data')
+// const PullToRefresh = ('./PullToRefresh')
 
 // IndexRoute allows you to have a landing page
 // Router is your route and it needs a hashHistory
@@ -36,6 +38,7 @@ const App = React.createClass({
       <Router history={hashHistory}>
         <Route path='/' component={Layout}>
           <IndexRoute component={Landing} />
+        
           <Route path='/search' component={Search} shows={shows}/>
           <Route path='/details/:id' component={Details} onEnter={this.assignShow} />
         </Route>
